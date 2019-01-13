@@ -8,13 +8,20 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
+   
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        let filePath=NSHomeDirectory()+"test.txt"
+        let fileManager=FileManager.default
+        
+        fileManager.createFile(atPath: filePath, contents: nil, attributes: nil)
+        
+        
     }
-
-
+    
 }
 
